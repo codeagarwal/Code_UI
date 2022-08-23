@@ -1,7 +1,6 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
-// ignore: depend_on_referenced_packages
 import 'package:velocity_x/velocity_x.dart';
 
 class HomePage extends StatelessWidget {
@@ -77,7 +76,7 @@ class HomePage extends StatelessWidget {
                             'Trending Topics',
                             textAlign: TextAlign.left,
                             style: TextStyle(
-                              color: Color.fromRGBO(0, 0, 0, 1),
+                              color: Colors.black,
                               fontFamily: 'Futura',
                               fontSize: 30,
                               fontWeight: FontWeight.normal,
@@ -126,7 +125,6 @@ class HomePage extends StatelessWidget {
                                         )),
                                   ]))),
                           Positioned(
-                              top: 0,
                               left: 116,
                               child: SizedBox(
                                   width: 130,
@@ -139,7 +137,7 @@ class HomePage extends StatelessWidget {
                                             decoration: const BoxDecoration(
                                               borderRadius: BorderRadius.all(
                                                   Radius.circular(14)),
-                                              color: Color.fromRGBO(0, 0, 0, 1),
+                                              color: Colors.black,
                                             ))),
                                     const Positioned(
                                         top: 8,
@@ -148,8 +146,7 @@ class HomePage extends StatelessWidget {
                                           '#development',
                                           textAlign: TextAlign.left,
                                           style: TextStyle(
-                                              color: Color.fromRGBO(
-                                                  255, 255, 255, 1),
+                                              color: Colors.white,
                                               fontFamily: 'Futura',
                                               fontSize: 15,
                                               fontWeight: FontWeight.normal,
@@ -258,6 +255,11 @@ class HomePage extends StatelessWidget {
                                   child: Stack(children: <Widget>[
                                     Positioned(
                                         child: Container(
+                                            child: InkWell(
+                                                hoverColor: Colors.black45,
+                                                onTap: () {
+                                                  debugPrint('Card tapped.');
+                                                }),
                                             width: 188,
                                             height: 28,
                                             decoration: const BoxDecoration(
@@ -265,25 +267,26 @@ class HomePage extends StatelessWidget {
                                                   Radius.circular(14)),
                                               color: Color.fromRGBO(0, 0, 0, 1),
                                             ))),
-                                    const Positioned(
-                                        top: 8,
-                                        left: 20,
-                                        child: Text(
-                                          '#macOSdevelopment',
-                                          textAlign: TextAlign.left,
-                                          style: TextStyle(
-                                              color: Color.fromRGBO(
-                                                  255, 255, 255, 1),
-                                              fontFamily: 'Futura',
-                                              fontSize: 15,
-                                              fontWeight: FontWeight.normal,
-                                              height: 1),
-                                        )),
+                                    const Padding(
+                                      padding:
+                                          EdgeInsets.only(top: 8, left: 20),
+                                      child: Text(
+                                        '#macOSdevelopment',
+                                        textAlign: TextAlign.left,
+                                        style: TextStyle(
+                                            color: Color.fromRGBO(
+                                                255, 255, 255, 1),
+                                            fontFamily: 'Futura',
+                                            fontSize: 15,
+                                            fontWeight: FontWeight.normal,
+                                            height: 1),
+                                      ),
+                                    ),
                                   ]))),
                         ])),
-                    Padding(
-                      padding: const EdgeInsets.only(top: 20),
-                      child: const Text(
+                    const Padding(
+                      padding: EdgeInsets.only(top: 20, right: 265),
+                      child: Text(
                         'Courses',
                         // textAlign: TextAlign.left,
                         style: TextStyle(
@@ -295,120 +298,263 @@ class HomePage extends StatelessWidget {
                       ),
                     ),
                     Padding(
+                      padding: const EdgeInsets.only(top: 8, right: 175),
+                      child: Text(
+                        "Recommendations for you.",
+                        // textAlign: TextAlign.left,
+                        style: TextStyle(
+                          color: Colors.grey[400],
+                          fontFamily: 'Futura',
+                          fontSize: 16,
+                          fontWeight: FontWeight.normal,
+                        ),
+                      ),
+                    ),
+                    Padding(
                       padding:
-                          const EdgeInsets.only(left: 24, right: 24, top: 20),
+                          const EdgeInsets.only(left: 32, right: 24, top: 20),
                       child: Row(
                         children: [
-                          Card(
-                            color: Color.fromRGBO(201, 235, 252, 1),
-                            shape: RoundedRectangleBorder(
-                              borderRadius: BorderRadius.circular(24),
-                            ),
-                            elevation: 0.0,
-                            child: InkWell(
-                              borderRadius: BorderRadius.circular(24),
-                              splashColor: Colors.white,
-                              onTap: () {
-                                debugPrint('Card tapped.');
-                              },
-                              child: Container(
-                                decoration: const BoxDecoration(
-                                    // color: Colors.blue,
-                                    borderRadius: BorderRadius.all(
-                                        Radius.circular(24.0))),
-                                width: 172,
-                                height: 196,
-                                child: const Icon(CupertinoIcons.pencil_outline,
-                                    color: Colors.blue, size: 40),
-                              ),
-                            ),
-                          ),
+                          Container(
+                              width: 172,
+                              height: 196,
+                              child: Stack(children: <Widget>[
+                                Positioned(
+                                    child: Container(
+                                        width: 172,
+                                        height: 196,
+                                        decoration: BoxDecoration(
+                                          borderRadius:
+                                              BorderRadius.circular(24),
+                                          color: const Color.fromRGBO(140, 210,
+                                              250, 0.46000000834465027),
+                                        ))),
+                                Positioned(
+                                    top: 24,
+                                    left: 23,
+                                    child: Container(
+                                        width: 65,
+                                        height: 65,
+                                        child: Stack(children: <Widget>[
+                                          Positioned(
+                                              child: Container(
+                                                  width: 65,
+                                                  height: 65,
+                                                  decoration: BoxDecoration(
+                                                    borderRadius:
+                                                        BorderRadius.circular(
+                                                            14),
+                                                    color: const Color.fromRGBO(
+                                                        140, 211, 251, 1),
+                                                  ))),
+                                          Positioned(
+                                            top: 10.833333015441895,
+                                            left: 11.9166259765625,
+                                            child: Image.asset(
+                                              'assets/images/pp.png',
+                                              height: 40.8,
+                                              width: 40.8,
+                                            ),
+                                          ),
+                                        ]))),
+                                const Positioned(
+                                    top: 105,
+                                    left: 24,
+                                    child: const Text(
+                                      'Programming',
+                                      textAlign: TextAlign.left,
+                                      style: const TextStyle(
+                                          color: Colors.black,
+                                          fontFamily: 'Futura',
+                                          fontSize: 21,
+                                          fontWeight: FontWeight.normal,
+                                          height: 1),
+                                    )),
+                              ])),
                           const SizedBox(
                             width: 20,
                           ),
-                          Card(
-                            color: Color.fromRGBO(201, 235, 252, 1),
-                            shape: RoundedRectangleBorder(
-                              borderRadius: BorderRadius.circular(24),
-                            ),
-                            elevation: 0.0,
-                            child: InkWell(
-                              borderRadius: BorderRadius.circular(24),
-                              splashColor: Colors.white,
-                              onTap: () {
-                                debugPrint('Card tapped.');
-                              },
-                              child: Container(
-                                decoration: const BoxDecoration(
-                                    // color: Colors.blue,
-                                    borderRadius: BorderRadius.all(
-                                        Radius.circular(24.0))),
-                                width: 172,
-                                height: 196,
-                                child: const Icon(CupertinoIcons.pencil_outline,
-                                    color: Colors.blue, size: 40),
-                              ),
-                            ),
-                          ),
+                          Container(
+                              width: 172,
+                              height: 196,
+                              child: Stack(children: <Widget>[
+                                Positioned(
+                                    child: Container(
+                                        width: 172,
+                                        height: 196,
+                                        decoration: BoxDecoration(
+                                          borderRadius:
+                                              BorderRadius.circular(24),
+                                          color: const Color.fromRGBO(140, 210,
+                                              250, 0.46000000834465027),
+                                        ))),
+                                Positioned(
+                                    top: 24,
+                                    left: 23,
+                                    child: Container(
+                                        width: 65,
+                                        height: 65,
+                                        child: Stack(children: <Widget>[
+                                          Positioned(
+                                              child: Container(
+                                                  width: 65,
+                                                  height: 65,
+                                                  decoration: BoxDecoration(
+                                                    borderRadius:
+                                                        BorderRadius.circular(
+                                                            14),
+                                                    color: const Color.fromRGBO(
+                                                        140, 211, 251, 1),
+                                                  ))),
+                                          Positioned(
+                                            top: 10.833333015441895,
+                                            left: 11.9166259765625,
+                                            child: Image.asset(
+                                              'assets/images/cc.png',
+                                              height: 40.8,
+                                              width: 40.8,
+                                            ),
+                                          ),
+                                        ]))),
+                                const Positioned(
+                                    top: 105,
+                                    left: 24,
+                                    child: const Text(
+                                      'Digital Art',
+                                      textAlign: TextAlign.left,
+                                      style: const TextStyle(
+                                          color: Colors.black,
+                                          fontFamily: 'Futura',
+                                          fontSize: 21,
+                                          letterSpacing:
+                                              0 /*percentages not used in flutter. defaulting to zero*/,
+                                          fontWeight: FontWeight.normal,
+                                          height: 1),
+                                    )),
+                              ])),
                         ],
                       ),
                     ),
                     Padding(
                       padding:
-                          const EdgeInsets.only(left: 24, right: 24, top: 15),
+                          const EdgeInsets.only(left: 32, right: 24, top: 15),
                       child: Row(
                         children: [
-                          Card(
-                            color: Color.fromRGBO(201, 235, 252, 1),
-                            shape: RoundedRectangleBorder(
-                              borderRadius: BorderRadius.circular(24),
-                            ),
-                            elevation: 0.0,
-                            child: InkWell(
-                              borderRadius: BorderRadius.circular(24),
-                              splashColor: Colors.white,
-                              onTap: () {
-                                debugPrint('Card tapped.');
-                              },
-                              child: Container(
-                                decoration: const BoxDecoration(
-                                    // color: Colors.blue,
-                                    borderRadius: BorderRadius.all(
-                                        Radius.circular(24.0))),
-                                width: 172,
-                                height: 196,
-                                child: const Icon(CupertinoIcons.pencil_outline,
-                                    color: Colors.blue, size: 40),
-                              ),
-                            ),
-                          ),
+                          Container(
+                              width: 172,
+                              height: 196,
+                              child: Stack(children: <Widget>[
+                                Positioned(
+                                    child: Container(
+                                        width: 172,
+                                        height: 196,
+                                        decoration: BoxDecoration(
+                                          borderRadius:
+                                              BorderRadius.circular(24),
+                                          color: const Color.fromRGBO(140, 210,
+                                              250, 0.46000000834465027),
+                                        ))),
+                                Positioned(
+                                    top: 24,
+                                    left: 23,
+                                    child: Container(
+                                        width: 65,
+                                        height: 65,
+                                        child: Stack(children: <Widget>[
+                                          Positioned(
+                                              child: Container(
+                                                  width: 65,
+                                                  height: 65,
+                                                  decoration: BoxDecoration(
+                                                    borderRadius:
+                                                        BorderRadius.circular(
+                                                            14),
+                                                    color: const Color.fromRGBO(
+                                                        140, 211, 251, 1),
+                                                  ))),
+                                          Positioned(
+                                            top: 10.833333015441895,
+                                            left: 11.9166259765625,
+                                            child: Image.asset(
+                                              'assets/images/aa.png',
+                                              height: 40.8,
+                                              width: 40.8,
+                                            ),
+                                          ),
+                                        ]))),
+                                const Positioned(
+                                    top: 105,
+                                    left: 24,
+                                    child: const Text(
+                                      'Copywriting',
+                                      textAlign: TextAlign.left,
+                                      style: const TextStyle(
+                                          color: Colors.black,
+                                          fontFamily: 'Futura',
+                                          fontSize: 21,
+                                          fontWeight: FontWeight.normal,
+                                          height: 1),
+                                    )),
+                              ])),
                           const SizedBox(
                             width: 20,
                           ),
-                          Card(
-                            color: Color.fromRGBO(201, 235, 252, 1),
-                            shape: RoundedRectangleBorder(
-                              borderRadius: BorderRadius.circular(24),
-                            ),
-                            elevation: 0.0,
-                            child: InkWell(
-                              borderRadius: BorderRadius.circular(24),
-                              splashColor: Colors.white,
-                              onTap: () {
-                                debugPrint('Card tapped.');
-                              },
-                              child: Container(
-                                decoration: const BoxDecoration(
-                                    // color: Colors.blue,
-                                    borderRadius: BorderRadius.all(
-                                        Radius.circular(24.0))),
-                                width: 172,
-                                height: 196,
-                                child: const Icon(CupertinoIcons.pencil_outline,
-                                    color: Colors.blue, size: 40),
-                              ),
-                            ),
-                          ),
+                          Container(
+                              width: 172,
+                              height: 196,
+                              child: Stack(children: <Widget>[
+                                Positioned(
+                                    child: Container(
+                                        width: 172,
+                                        height: 196,
+                                        decoration: BoxDecoration(
+                                          borderRadius:
+                                              BorderRadius.circular(24),
+                                          color: const Color.fromRGBO(140, 210,
+                                              250, 0.46000000834465027),
+                                        ))),
+                                Positioned(
+                                    top: 24,
+                                    left: 23,
+                                    child: Container(
+                                        width: 65,
+                                        height: 65,
+                                        child: Stack(children: <Widget>[
+                                          Positioned(
+                                              child: Container(
+                                                  width: 65,
+                                                  height: 65,
+                                                  decoration: BoxDecoration(
+                                                    borderRadius:
+                                                        BorderRadius.circular(
+                                                            14),
+                                                    color: const Color.fromRGBO(
+                                                        140, 211, 251, 1),
+                                                  ))),
+                                          Positioned(
+                                            top: 10.833333015441895,
+                                            left: 11.9166259765625,
+                                            child: Image.asset(
+                                              'assets/images/tt.png',
+                                              height: 40.8,
+                                              width: 40.8,
+                                            ),
+                                          ),
+                                        ]))),
+                                const Positioned(
+                                    top: 105,
+                                    left: 24,
+                                    child: const Text(
+                                      'Translation',
+                                      textAlign: TextAlign.left,
+                                      style: const TextStyle(
+                                          color: Colors.black,
+                                          fontFamily: 'Futura',
+                                          fontSize: 21,
+                                          fontWeight: FontWeight.normal,
+                                          height: 1),
+                                    )),
+                              ])),
                         ],
                       ),
                     )
